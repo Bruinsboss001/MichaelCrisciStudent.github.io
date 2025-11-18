@@ -1,0 +1,62 @@
+/* Body styling */
+body {
+  font-family: "Times New Roman", sans-serif;
+  max-width: 100rem;
+  margin-left: 10px;
+  margin-right: 10px; /* fixed typo: 1opx → 10px */
+  background-color: cornflowerblue;
+  border: 3px solid darkred; /* fixed incomplete border */
+  padding: 10px;
+}
+
+/* Header styling */
+header {
+  background-color: deeppink;
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 15px;
+}
+
+/* Image styling */
+img {
+  width: 100%;
+}
+
+/* Figure caption styling */
+.caption {
+  font-size: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 5px;
+}
+
+/* H1 styling */
+h1 {
+  font-weight: bold; /* font-style: bold → font-weight: bold */
+  font-size: 40px;
+}
+
+/* H2 styling */
+h2 {
+  font-size: 24px;
+  margin-bottom: 1.5rem;
+}
+
+/* Paragraph styling */
+p {
+  font-size: 20px;
+  font-family: cursive;
+}
+
+/* Additional images */
+.otherimg {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
