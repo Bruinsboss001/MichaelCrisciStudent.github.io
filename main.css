@@ -22,7 +22,8 @@ header {
 
 /* Image styling */
 img {
-  width: 100%;
+  width: 50%;
+  length: 50%;
 }
 
 /* Figure caption styling */
