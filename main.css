@@ -22,8 +22,7 @@ header {
 
 /* Image styling */
 img {
-  width: 50%;
-  length: 50%;
+  transform: scale(.3);
 }
 
 /* Figure caption styling */
