@@ -1,0 +1,123 @@
+<!-- I added a Bounce to my header, and I also made the text slide in and ot based on where you are on the screen-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Final project template: HTML</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="final.css">
+</head>
+
+<body>
+    <section class="header">
+        <h1>Hockey Prices of 2023-2024.</h1>
+        <h2>As the game grows, so does the price.  This graph that I made does a great job of looking at a recent NHL season in 2023 and 2024 and shows how expensive the tickets are.  It gives a nice look into future seasons today and how the price has grown.</h2>
+        <h4>Michael Crisci</h4>
+    </section>
+
+    <section>
+        <h3>This is my first subhed</h3>
+        <img src="newhouse.jpg" alt="Picture of Newhouse" height="300" width="400">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </section>
+
+    <section>
+        <h3>This is another subhed</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </section>
+
+    <section>
+        <div class="list">
+            <h2>Top refugee cities in the U.S.</h2>
+            <ul>
+                <li>Chicago</li>
+                <li>Phoenix</li>
+                <li>Houston</li>
+                <li>Boston</li>
+            </ul>
+        </div>
+
+        <iframe title="Puck Prices" aria-label="Stacked Bars" id="datawrapper-chart-Pkyaj" 
+                src="https://datawrapper.dwcdn.net/Pkyaj/1/" scrolling="no" frameborder="0" 
+                style="width: 0; min-width: 100% !important; border: none;" height="1008" data-external="1">
+        </iframe>
+        <script type="text/javascript">
+            window.addEventListener("message", function(a){
+                if(void 0 !== a.data["datawrapper-height"]) {
+                    var e = document.querySelectorAll("iframe");
+                    for(var t in a.data["datawrapper-height"])
+                        for(var r, i=0; r=e[i]; i++)
+                            if(r.contentWindow===a.source){
+                                var d = a.data["datawrapper-height"][t]+"px";
+                                r.style.height = d;
+                            }
+                }
+            });
+        </script>
+    </section>
+
+    <section>
+        <h3>This is my final subhed</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            punt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+    </section>
+
+    <div class="footer">
+        <p>
+            This page was built in Github Pages by Prof. Jon Glass for JNL221 at Syracuse University. 
+            Fonts used: Georgia, Poppins.
+        </p>
+    </div>
+
+    <!-- Scroll Slide-in Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Select all text elements
+            const textElements = document.querySelectorAll(
+                "h1, h2, h3, h4, h5, h6, p, li, .footer p"
+            );
+
+            // Add .slide-in class to all of them
+            textElements.forEach(el => el.classList.add("slide-in"));
+
+            function checkSlide() {
+                const triggerBottom = window.innerHeight * 0.9;
+                textElements.forEach(el => {
+                    const top = el.getBoundingClientRect().top;
+                    if(top < triggerBottom && top > 0) {
+                        el.classList.add("active");
+                    } else {
+                        el.classList.remove("active");
+                    }
+                });
+            }
+
+            window.addEventListener('scroll', checkSlide);
+            window.addEventListener('load', checkSlide);
+        });
+    </script>
+</body>
+</html>

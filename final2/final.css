@@ -1,0 +1,71 @@
+/* I added a Bounce to the Header as well as a Slide in and out based on Scrolling */
+
+/* --- Footer --- */
+.footer p {
+    background-color: #cccccc;
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+/* --- Header --- */
+.header {
+    height: auto;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    background-color: skyblue;
+    animation: bounce 1.2s infinite ease-in-out;
+}
+
+/* Bounce Keyframes */
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* --- Headings --- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif;
+    margin: 10px 0;
+}
+
+/* --- Lists --- */
+ul {
+    margin-left: 20px;
+}
+
+/* --- Responsive Media Query --- */
+@media only screen and (max-width: 767px) {
+    .list {
+        float: none;
+        min-width: 90%;
+        margin-left: 10px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    iframe {
+        min-width: 90%;
+        margin-right: 10px;
+    }
+    img {
+        float: right;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+/* --- Scroll Slide-in/Out Animations --- */
+.slide-in {
+    transform: translateX(-100px); /* start off screen left */
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.slide-in.active {
+    transform: translateX(0); /* slide in */
+    opacity: 1;
+}
